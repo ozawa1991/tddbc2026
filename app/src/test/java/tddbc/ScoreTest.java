@@ -15,4 +15,16 @@ public class ScoreTest {
         Score newScore = score.add(new Point(5));
         assertEquals(5, newScore.value());
     }
+
+    @Test void _2回投てきを行ったとき_2回の合計点数が現在の得点になること() {
+        Score score = new Score(0);
+        Score newScore = score.add(new Point(5)).add(new Point(7));
+        assertEquals(12, newScore.value());
+    }
+
+    @Test void _0点の投てきを含んでいても_合計点数が算出できること() {
+        Score score = new Score(0);
+        Score newScore = score.add(new Point(5)).add(new Point(0));
+        assertEquals(5, newScore.value());
+    }
 }
