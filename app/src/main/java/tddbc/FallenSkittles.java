@@ -4,16 +4,16 @@ import java.util.List;
 import java.util.Set;
 
 public final class FallenSkittles {
-    private final Set<Skittle> numbers;
+    private final Set<Skittle> skittles;
 
-    public FallenSkittles(List<Skittle> numbers) {
-        this.numbers = Set.copyOf(numbers);
-        if (this.numbers.size() != numbers.size()) {
-            throw new IllegalArgumentException("倒れたスキットルの番号が重複しています");
-        }
+    public Set<Skittle> skittles() {
+        return skittles;
     }
 
-    public Set<Skittle> numbers() {
-        return numbers;
+    public FallenSkittles(List<Skittle> skittles) {
+        this.skittles = Set.copyOf(skittles);
+        if (this.skittles.size() != skittles.size()) {
+            throw new IllegalArgumentException("倒れたスキットルの番号が重複しています");
+        }
     }
 }

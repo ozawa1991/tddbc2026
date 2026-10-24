@@ -17,6 +17,6 @@ class FallenSkittlesTest {
     @Test void _2_4_6番のスキットル3本が倒れたことが表現されること() {
         List<Skittle> numbers = List.of(new Skittle(2), new Skittle(4), new Skittle(6));
         FallenSkittles fallen = new FallenSkittles(numbers);
-        assertEquals(Set.of(new Skittle(2), new Skittle(4), new Skittle(6)), fallen.numbers());
+        assertEquals(Set.of(new Skittle(4), new Skittle(2), new Skittle(6)), fallen.skittles());
     }
 }
