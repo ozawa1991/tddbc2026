@@ -1,18 +1,19 @@
 package tddbc;
 
-import java.util.List;
+import java.util.Set;
 
 public class Score {
-    private final List<Skittle> skittles;
+    private final FallenSkittles fallen;
 
-    public Score(List<Skittle> skittles) {
-        this.skittles = skittles;
+    public Score(FallenSkittles fallen) {
+        this.fallen = fallen;
     }
 
     public int calc() {
-        if(skittles.size() == 1) {
-            return skittles.getFirst().getNumber();
+        Set<SkittleNumber> numbers = fallen.numbers();
+        if (numbers.size() == 1) {
+            return numbers.iterator().next().value();
         }
-        return skittles.size();
+        return numbers.size();
     }
 }
