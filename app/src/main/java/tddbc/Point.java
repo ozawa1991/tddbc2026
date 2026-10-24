@@ -2,10 +2,10 @@ package tddbc;
 
 import java.util.Set;
 
-public class Score {
+public class Point {
     private final FallenSkittles fallen;
 
-    public Score(FallenSkittles fallen) {
+    public Point(FallenSkittles fallen) {
         this.fallen = fallen;
     }
 
