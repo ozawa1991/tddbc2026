@@ -1,6 +1,6 @@
 # TDDBC 2026
 
-Java 17 / Gradle / JUnit Jupiter。テスト実行: `./gradlew test --build-cache --max-workers=2`
+Java 25 / Gradle / JUnit Jupiter。テスト実行: `./gradlew test --build-cache --max-workers=2`
 
 ## 進め方 (TDD + ペアプロ)
 
