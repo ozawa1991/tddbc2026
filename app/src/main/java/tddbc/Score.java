@@ -12,7 +12,7 @@ public class Score {
     public int calc() {
         Set<SkittleNumber> numbers = fallen.numbers();
         if (numbers.size() == 1) {
-            return numbers.iterator().next().value();
+            return numbers.stream().findFirst().orElseThrow().value();
         }
         return numbers.size();
     }
