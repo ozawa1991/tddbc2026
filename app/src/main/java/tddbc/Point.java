@@ -2,18 +2,12 @@ package tddbc;
 
 import java.util.Set;
 
-public class Point {
-    private final FallenSkittles fallen;
-
-    public Point(FallenSkittles fallen) {
-        this.fallen = fallen;
-    }
-
-    public int calc() {
+public record Point(int value) {
+    public static Point from(FallenSkittles fallen) {
         Set<SkittleNumber> numbers = fallen.numbers();
         if (numbers.size() == 1) {
-            return numbers.stream().findFirst().orElseThrow().value();
+            return new Point(numbers.stream().findFirst().orElseThrow().value());
         }
-        return numbers.size();
+        return new Point(numbers.size());
     }
 }
