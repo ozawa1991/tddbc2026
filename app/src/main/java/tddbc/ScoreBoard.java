@@ -3,15 +3,15 @@ package tddbc;
 import java.util.ArrayList;
 import java.util.List;
 
-public record ScoreHistory(List<Score> scores) {
-    public static ScoreHistory initial() {
-        return new ScoreHistory(List.of());
+public record ScoreBoard(List<Score> scores) {
+    public static ScoreBoard initial() {
+        return new ScoreBoard(List.of());
     }
 
-    public ScoreHistory add(Point point) {
+    public ScoreBoard record(Point point) {
         List<Score> next = new ArrayList<>(scores);
         next.add(current().add(point));
-        return new ScoreHistory(List.copyOf(next));
+        return new ScoreBoard(List.copyOf(next));
     }
 
     public Score current() {
