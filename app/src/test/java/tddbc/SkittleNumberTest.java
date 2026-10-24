@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-public class SkittleTest {
+public class SkittleNumberTest {
     @Test void _1の番号のスキットルは有効であること() {
         assertDoesNotThrow(() -> new Skittle(new SkittleNumber(1)));
     }
