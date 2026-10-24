@@ -10,13 +10,13 @@ import org.junit.jupiter.api.Test;
 
 class FallenSkittlesTest {
     @Test void 同じ番号のスキットルが重複して存在しないこと() {
-        List<SkittleNumber> numbers = List.of(new SkittleNumber(1), new SkittleNumber(1));
+        List<Skittle> numbers = List.of(new Skittle(1), new Skittle(1));
         assertThrows(IllegalArgumentException.class, () -> new FallenSkittles(numbers));
     }
 
     @Test void _2_4_6番のスキットル3本が倒れたことが表現されること() {
-        List<SkittleNumber> numbers = List.of(new SkittleNumber(2), new SkittleNumber(4), new SkittleNumber(6));
+        List<Skittle> numbers = List.of(new Skittle(2), new Skittle(4), new Skittle(6));
         FallenSkittles fallen = new FallenSkittles(numbers);
-        assertEquals(Set.of(new SkittleNumber(2), new SkittleNumber(4), new SkittleNumber(6)), fallen.numbers());
+        assertEquals(Set.of(new Skittle(2), new Skittle(4), new Skittle(6)), fallen.numbers());
     }
 }

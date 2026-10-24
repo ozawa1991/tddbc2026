@@ -4,10 +4,10 @@ import java.util.Set;
 
 public record Point(int value) {
     public static Point from(FallenSkittles fallen) {
-        Set<SkittleNumber> numbers = fallen.numbers();
-        if (numbers.size() == 1) {
-            return new Point(numbers.stream().findFirst().orElseThrow().value());
+        Set<Skittle> skittles = fallen.numbers();
+        if (skittles.size() == 1) {
+            return new Point(skittles.stream().findFirst().orElseThrow().number());
         }
-        return new Point(numbers.size());
+        return new Point(skittles.size());
     }
 }

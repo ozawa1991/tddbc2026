@@ -17,14 +17,14 @@ public class PointTest {
     class 倒れた本数が1本のとき {
         @Test void _1の番号のスキットルが倒れたとき_点数が1になること() {
             Point point = Point.from(new FallenSkittles(List.of(
-                new SkittleNumber(1)
+                new Skittle(1)
             )));
             assertEquals(1, point.value());
         }
 
         @Test void _12の番号のスキットルが倒れたとき_点数が12になること() {
             Point point = Point.from(new FallenSkittles(List.of(
-                new SkittleNumber(12)
+                new Skittle(12)
             )));
             assertEquals(12, point.value());
         }
@@ -35,17 +35,17 @@ public class PointTest {
     class 倒れた本数が2本以上のとき {
         @Test void スキットルが2本倒れたとき_点数が2になること() {
             Point point = Point.from(new FallenSkittles(List.of(
-                new SkittleNumber(1),
-                new SkittleNumber(2)
+                new Skittle(1),
+                new Skittle(2)
             )));
             assertEquals(2, point.value());
         }
 
         @Test void スキットルが3本倒れたとき_点数が3になること() {
             Point point = Point.from(new FallenSkittles(List.of(
-                new SkittleNumber(1),
-                new SkittleNumber(2),
-                new SkittleNumber(3)
+                new Skittle(1),
+                new Skittle(2),
+                new Skittle(3)
             )));
             assertEquals(3, point.value());
         }
