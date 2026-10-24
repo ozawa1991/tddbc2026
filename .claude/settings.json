@@ -1,0 +1,6 @@
+{
+  "enabledPlugins": {
+    "jdtls-lsp@claude-plugins-official": true,
+    "learning-output-style@claude-plugins-official": true
+  }
+}
