@@ -10,6 +10,9 @@ public class Score {
     }
 
     public int calc() {
-        return skittles.getFirst().getNumber();
+        if(skittles.size() == 1) {
+            return skittles.getFirst().getNumber();
+        }
+        return skittles.size();
     }
 }
