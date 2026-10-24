@@ -5,11 +5,10 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class ScoreTest {
     private static FallenSkittles fallen(List<Integer> numbers) {
-        return new FallenSkittles(numbers.stream().map(SkittleNumber::new).collect(Collectors.toSet()));
+        return new FallenSkittles(numbers.stream().map(SkittleNumber::new).toList());
     }
 
     @Test void スキットルが1本も倒れなかったとき_スコアが0になること() {
